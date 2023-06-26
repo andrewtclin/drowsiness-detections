@@ -1,0 +1,7 @@
+**/.ipynb_checkpoints/
+core/model/data
+core/model/yolov5
+core/model/labelImg
+core/model/yolov5s.pt
+env.py
+**/__pycache__/
