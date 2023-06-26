@@ -1,5 +1,5 @@
-from core.ml_models import MLModels
+from core.model_runner import MLModel
 
 def get_models() -> list:
-    models = MLModels()
-    return models.get_models()
+    model = MLModel()
+    pass

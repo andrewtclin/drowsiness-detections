@@ -1,5 +1,4 @@
 import { FC } from "react";
-
 import { BsGithub } from "react-icons/bs";
 
 const Instructions: FC = ({}) => {
@@ -9,15 +8,14 @@ const Instructions: FC = ({}) => {
         <p>This model is trained based on YOLOv5.</p>
         <p className="flex justify-center items-center pt-2">
           Click here to view&nbsp;
-          <span className="font-medium underline">
-            custom trained model
-          </span>:{" "}
           <a
             className="underline hover:font-medium hover:text-blue-700"
-            href="https://github.com/andrewtclin/drowsiness-detection/blob/master/drowsiness_detection.ipynb"
+            href="https://github.com/andrewtclin/drowsiness-detections/blob/master/backend/core/model/drowsiness_detection.ipynb"
             target="_blank"
           >
-            <BsGithub className="ml-1 text-2xl animate-bounce hover:animate-none" />
+            <span className="font-medium underline flex">
+              custom trained model <BsGithub className="mt-1 ml-1 text-lg" />
+            </span>
           </a>
         </p>
       </div>
