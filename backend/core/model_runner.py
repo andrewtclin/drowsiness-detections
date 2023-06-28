@@ -6,26 +6,26 @@ import torch
 
 class MLModel:
     def __init__(self) -> None:
+        cwd = os.getcwd()
+        yolov5_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'model', 'yolov5')
+        os.chdir(yolov5_dir)
+        print(os.getcwd())
         print('loading YOLOv5...')
-        self.__yolov5 = torch.hub.load('ultralytics/yolov5', 'yolov5s')
         print('YOLOv5 loaded')
+        os.chdir(cwd)
+        print(os.getcwd())
 
-    def __detect_img(self, img:str) -> None:
+    def detect_img(self, img:str) -> str:
         current_dir = os.path.dirname(os.path.abspath(__file__))
         output_dir = os.path.join(current_dir, 'detections')
+        output_img = os.path.join(output_dir, 'output.png')
         if os.path.exists(output_dir):
             shutil.rmtree(output_dir, ignore_errors=True)
         os.makedirs(output_dir, exist_ok=True)
-
+        
         detections = self.__yolov5(img)
         detections.print()
         plt.imshow(np.squeeze(detections.render()))
-        plt.savefig(os.path.join(output_dir, 'output.png'))
+        plt.savefig(output_img)
+        return output_img
 
-    def get_models(self) -> list:
-        models = []
-        models_folder = os.path.join('core', 'models')
-        for item in os.listdir(models_folder):
-            if os.path.isdir(os.path.join(models_folder, item)):
-                models.append(item)
-        return models   
