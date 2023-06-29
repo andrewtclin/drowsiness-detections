@@ -3,9 +3,9 @@ import os
 from flask import Flask, render_template
 from flask_cors import CORS
 
-from utils import api_result as api_result
+from api_utils import api_result as api_result
 
-from controllers import mlmodel_controller
+from api_controllers import mlmodel_controller
 import env
 
 app = Flask(__name__, static_folder='./dist/static', template_folder='./dist')
