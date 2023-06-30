@@ -8,7 +8,7 @@ from api_utils import api_result as api_result
 from api_controllers import mlmodel_controller
 import env
 
-app = Flask(__name__, static_folder='./dist/static', template_folder='./dist')
+app = Flask(__name__, static_folder='./detections', template_folder='./dist')
 CORS(app)
 # @app.route('/<path:path>')
 # def catch_all(path):

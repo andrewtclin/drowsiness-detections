@@ -3,11 +3,13 @@ import { BsGithub } from "react-icons/bs";
 
 const Instructions: FC = ({}) => {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center text-center">
       <div className="flex flex-col justify-center items-center mb-6">
-        <p>This model is trained based on YOLOv5.</p>
-        <p className="flex justify-center items-center pt-2">
-          Click here to view&nbsp;
+        <p className="text-sm sm:text-base">
+          This model is trained based on YOLOv5.
+        </p>
+        <p className="flex justify-center items-center pt-2 text-sm sm:text-base">
+          Click to view&nbsp;
           <a
             className="underline hover:font-medium hover:text-blue-700"
             href="https://github.com/andrewtclin/drowsiness-detections/blob/master/backend/core/model/drowsiness_detection.ipynb"
@@ -20,9 +22,9 @@ const Instructions: FC = ({}) => {
         </p>
       </div>
 
-      <p>
-        This demonstration showcases{" "}
-        <span className="font-medium underline">detections by YOLOv5</span>
+      <p className="text-sm sm:text-base">
+        This demo only showcases{" "}
+        <span className="font-medium underline">detections by YOLOv5.</span>
       </p>
     </div>
   );
