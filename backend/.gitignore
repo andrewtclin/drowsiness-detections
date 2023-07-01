@@ -4,3 +4,5 @@ core/model/yolov5
 core/model/labelImg
 env.py
 **/__pycache__/
+/detections/
+/core/image_data/
