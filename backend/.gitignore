@@ -6,3 +6,4 @@ env.py
 **/__pycache__/
 /detections/
 /core/image_data/
+/dist/
