@@ -1,5 +1,3 @@
-import os
-
 from flask import Flask, render_template
 from flask_cors import CORS
 
@@ -8,15 +6,15 @@ from api_utils import api_result as api_result
 from api_controllers import mlmodel_controller
 import env
 
-app = Flask(__name__, static_folder='./detections')
+app = Flask(__name__, static_folder='./detections', template_folder='./dist')
 CORS(app)
-# @app.route('/<path:path>')
-# def catch_all(path):
-#     return render_template("index.html")
+@app.route('/<path:path>')
+def catch_all(path):
+    return render_template("index.html")
 
-# @app.route('/')
-# def index():
-#     return render_template("index.html")
+@app.route('/')
+def index():
+    return render_template("index.html")
 # -------------- #
 @app.errorhandler(401)
 def method_401(e):
