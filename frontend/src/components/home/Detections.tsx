@@ -1,11 +1,12 @@
 "use client";
 import { FC, useState } from "react";
-import Image from "next/image";
-import { detectImage } from "@/apis/apisConfig";
+import { detectImage, realTimeDetect } from "@/apis/apisConfig";
 
 import type { UploadProps } from "antd";
 import { Button, Modal, Input, Upload, Spin } from "antd";
 import { AiOutlineUpload } from "react-icons/ai";
+import { MdDeleteOutline } from "react-icons/md";
+import { TiTick } from "react-icons/ti";
 
 const Detections: FC = ({}) => {
   //#region ------ Variables ------
@@ -39,6 +40,20 @@ const Detections: FC = ({}) => {
     }
     setIsLoading(false);
   };
+
+  const onRealTimeDetect = async () => {
+    setIsLoading(true);
+    const message = await realTimeDetect();
+    if (message === "No webcame available") {
+      Modal.error({
+        title: "No Webcam Found",
+        content: "Please make sure the webcam is attached.",
+        okText: "Exit",
+        okType: "default",
+      });
+    }
+    setIsLoading(false);
+  };
   //#endregion
 
   //#region ------ Props Config ------
@@ -53,6 +68,7 @@ const Detections: FC = ({}) => {
     onRemove() {
       setUploadedFile({});
     },
+    showUploadList: false,
   };
 
   const imageDetectionModal: JSX.Element = (
@@ -73,6 +89,23 @@ const Detections: FC = ({}) => {
           Upload
         </Button>
       </Upload>
+
+      {Object.keys(uploadedFile).length ? (
+        <div className="flex justify-start items-center">
+          <TiTick className="text-xl text-green-600 border-2 border-green-600 rounded-full mr-2" />
+          <p>
+            {uploadedFile && (uploadedFile as any).name
+              ? (uploadedFile as any).name
+              : "Uploaded"}
+          </p>
+          <MdDeleteOutline
+            className="hover:cursor-pointer text-xl text-red-500 hover:text-red-300 ml-2"
+            onClick={() => setUploadedFile({})}
+          />
+        </div>
+      ) : (
+        ""
+      )}
       <Button
         type="default"
         disabled={
@@ -82,6 +115,22 @@ const Detections: FC = ({}) => {
       >
         Detect
       </Button>
+    </div>
+  );
+
+  const realTimeDetectModal: JSX.Element = (
+    <div className="grid grid-cols-1 gap-y-4 my-10">
+      <Button type="default" onClick={onRealTimeDetect}>
+        Detect
+      </Button>
+      <p>
+        Tip: When detecting,{" "}
+        <span className="font-medium">press &apos;Q&apos;</span> to exit.
+      </p>
+      <p className="text-sm font-medium">
+        Compatibility: This feature currently only supports{" "}
+        <span className="underline">laptop version</span>.
+      </p>
     </div>
   );
 
@@ -112,7 +161,15 @@ const Detections: FC = ({}) => {
         ]}
         maskClosable={false}
       >
-        <Spin spinning={isLoading}>{imageDetectionModal}</Spin>
+        {mode === "image" ? (
+          <Spin spinning={isLoading} tip="Initiating model...">
+            {imageDetectionModal}
+          </Spin>
+        ) : (
+          <Spin spinning={isLoading} tip="Initiating model...">
+            {realTimeDetectModal}
+          </Spin>
+        )}
       </Modal>
 
       <Modal

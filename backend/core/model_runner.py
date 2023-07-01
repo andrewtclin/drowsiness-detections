@@ -18,6 +18,9 @@ class MLModel:
         print('YOLOv5 loaded')
         os.chdir(cwd)
 
+    def get_model(self):
+        return self.__yolov5
+
     def detect_img(self, img) -> str:
         output_dir = 'detections'
         output_img = os.path.join(output_dir, 'output.png')
@@ -30,8 +33,6 @@ class MLModel:
             if os.path.exists(img_data_dir):
                 shutil.rmtree(img_data_dir, ignore_errors=True)
             os.makedirs(img_data_dir, exist_ok=True)
-            print('in2')
-            print(os.path.splitext(img.filename)[1])
             img_name = 'img' + os.path.splitext(img.filename)[1]
             img.save(os.path.join(img_data_dir, img_name))
             img = os.path.join(img_data_dir, img_name)
@@ -46,4 +47,3 @@ class MLModel:
             print('Cannot recognize image', e)
             return ''
         
-
