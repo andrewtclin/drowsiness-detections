@@ -1,5 +1,4 @@
 import { FC } from "react";
-import Image from "next/image";
 
 const Demo: FC = ({}) => {
   return (
