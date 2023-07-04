@@ -7,14 +7,14 @@
 
 <img src="drowsiness_demo.png" alt="Alt Text" width="400" height="auto">
 
+### DEMO
+
+- Check out our demo video showcasing the Drowsiness Detection application in action:
+  - [Drowsiness Detections](https://www.youtube.com/watch?v=KFHNxGSGBc8&feature=youtu.be)
+
 ### Features
 
 - Utilizes YOLOv5s as the benchmark model for accurate and efficient detection.
 - Custom trained image data ensures improved performance in detecting drowsiness.
 - Provides real-time monitoring of individuals to determine their level of alertness.
 - Can be integrated into various applications, such as driver monitoring systems or workplace safety solutions.
-
-### DEMO
-
-- Check out our demo video showcasing the Drowsiness Detection application in action:
-  - [Drowsiness Detections](https://www.youtube.com/watch?v=KFHNxGSGBc8&feature=youtu.be)
