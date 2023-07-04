@@ -1,15 +1,20 @@
 ## Drowsiness Detection using YOLOv5
 
 ### Overview
-* Drowsiness Detection is an application that utilizes the YOLOv5s model and custom trained image data to detect whether a person appears drowsy or awake. 
-* It can be further enhanced and adapted for various use cases in different domains.
+
+- Drowsiness Detection is an application that utilizes the YOLOv5s model and custom trained image data to detect whether a person appears drowsy or awake.
+- It can be further enhanced and adapted for various use cases in different domains.
+
+![Drowsiness Detection](drowsiness_demo.png)
 
 ### Features
-* Utilizes YOLOv5s as the benchmark model for accurate and efficient detection.
-* Custom trained image data ensures improved performance in detecting drowsiness.
-* Provides real-time monitoring of individuals to determine their level of alertness.
-* Can be integrated into various applications, such as driver monitoring systems or workplace safety solutions.
+
+- Utilizes YOLOv5s as the benchmark model for accurate and efficient detection.
+- Custom trained image data ensures improved performance in detecting drowsiness.
+- Provides real-time monitoring of individuals to determine their level of alertness.
+- Can be integrated into various applications, such as driver monitoring systems or workplace safety solutions.
 
 ### DEMO
-* Check out our demo video showcasing the Drowsiness Detection application in action: 
-	* [Drowsiness Detections](https://www.youtube.com/watch?v=KFHNxGSGBc8&feature=youtu.be)
+
+- Check out our demo video showcasing the Drowsiness Detection application in action:
+  - [Drowsiness Detections](https://www.youtube.com/watch?v=KFHNxGSGBc8&feature=youtu.be)
