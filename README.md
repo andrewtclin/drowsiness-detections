@@ -1,4 +1,4 @@
-## Drowsiness Detection with applying YOLOv5
+## Drowsiness Detection by applying YOLOv5
 
 ### DEMO
 
