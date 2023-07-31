@@ -2,7 +2,7 @@
 
 ### DEMO
 
-- Check out our demo video showcasing the Drowsiness Detection application in action:
+- Check out my demo video showcasing the Drowsiness Detection application in action:
   - [Drowsiness Detections](https://www.youtube.com/watch?v=KFHNxGSGBc8&feature=youtu.be)
 
 ### Overview
