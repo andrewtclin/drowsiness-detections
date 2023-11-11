@@ -15,6 +15,6 @@
 ### Features
 
 - Utilizes YOLOv5s as the benchmark model for accurate and efficient detection.
-- Custom trained image data ensures improved performance in detecting drowsiness.
+- Custom-trained image data ensures improved performance in detecting drowsiness.
 - Provides real-time monitoring of individuals to determine their level of alertness.
 - Can be integrated into various applications, such as driver monitoring systems or workplace safety solutions.
