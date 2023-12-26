@@ -2,7 +2,7 @@
 
 ### Demo
 
-- Demo video showcasing the Drowsiness Detection application in action:
+- Demo video showcasing Drowsiness Detection application in action:
   - [Drowsiness Detections](https://www.youtube.com/watch?v=KFHNxGSGBc8&feature=youtu.be)
  
 - For Jupyter Notebook access:
