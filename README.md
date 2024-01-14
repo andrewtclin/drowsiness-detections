@@ -1,6 +1,6 @@
 ## Drowsiness Detection - Running via YOLOv5s
 
-### Demo
+### Project Demo
 
 - Demo video:
   - [Drowsiness Detections](https://www.youtube.com/watch?v=KFHNxGSGBc8&feature=youtu.be)
