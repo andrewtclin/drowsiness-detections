@@ -17,7 +17,7 @@
 
 ### Features
 
-- Implements YOLOv5s for accurate and efficient detection.
+- YOLOv5s is implemented for accurate and efficient detection.
 - Custom-trained image data ensures improved performance in detecting drowsiness.
 - Provides real-time monitoring of individuals to determine their level of alertness.
 - Can be integrated into various applications, such as driver monitoring systems or workplace safety solutions.
