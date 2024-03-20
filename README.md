@@ -3,7 +3,7 @@
 ### Project Demo
 
 - Demo video:
-  - [Drowsiness Detections](https://www.youtube.com/watch?v=KFHNxGSGBc8&feature=youtu.be)
+  - [Drowsiness Detection](https://www.youtube.com/watch?v=KFHNxGSGBc8&feature=youtu.be)
  
 - Jupyter Notebook:
   - [Jupyter Notebook](https://github.com/andrewtclin/drowsiness-detections/blob/master/backend/core/model/drowsiness_detection.ipynb)
