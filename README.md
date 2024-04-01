@@ -10,7 +10,7 @@
 
 ### Overview
 
-- Drowsiness Detection - Implements YOLOv5 and custom image data to detect whether a person appears to be drowsy or awake.
+- Drowsiness Detection - Implements YOLOv5 and custom image data to detect whether a person appears as drowsy or awake.
 - Can further be enhanced and adapted for different use cases in various domains.
 
 <img src="drowsiness_demo.png" alt="Alt Text" width="400" height="auto">
